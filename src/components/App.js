@@ -1,6 +1,8 @@
 import React from "react";
-import { Button } from "components/common";
 import { createGlobalStyle } from "styled-components";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Login from "components/pages/Login";
+import Home from "components/pages/Home";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -16,11 +18,16 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <h1>App</h1>
-      <Button>primary button</Button>
-      <Button secondary>secondary button</Button>
-      <Button disabled>disabled button</Button>
-      <Button large>large button</Button>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </>
   );
 }
