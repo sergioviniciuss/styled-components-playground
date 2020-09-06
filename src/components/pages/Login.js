@@ -39,8 +39,6 @@ export default () => {
         />
         <PasswordInput
           name="password"
-          placeholder="Password"
-          type="password"
           onChange={handleInputChange}
           value={formFields.password}
         />
