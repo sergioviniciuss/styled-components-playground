@@ -6,7 +6,7 @@ const Form = styled.form`
   width: 100%;
   max-width: 400px;
   background: white;
-  border: 1x solid #eee;
+  border: 1px solid #eee;
   box-sizing: border-box;
   padding: 16px;
   color: black;
